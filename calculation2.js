@@ -19,7 +19,6 @@ function playerSelect(playerNameSelect) {
         td2.classList.add('text-white');
         tr.appendChild(td2);  
         var x = document.getElementById(playerNameSelect.id);
-        console.log(x);
         x.setAttribute('disabled', true);
         x.style.backgroundColor = "gray";
     }
