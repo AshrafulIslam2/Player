@@ -24,7 +24,7 @@
             </div>
         </div>
     </header>
-    <main class="flex">
+    <main class="flex bg-black">
         <section class="grid grid-cols-3 content-center  gap-4 w-3/5 mx-auto" id="mainSection">
 
         </section>
@@ -48,29 +48,31 @@
                 </div>
                 <div class="flex p-2">
                     <h3 class="mr-1 text-white">Per player</h3>
-                    <input type="number" name="" id="" class="border">
+                    <input type="number" name="" id="calcInput" class="border">
                 </div>
                 <div class="flex justify-center">
-                    <button type="submit" class="text-white bg-sky-600 w-64 h-8">Calculate</button>
+                    <button type="submit" class="text-white bg-sky-600 w-64 h-8"
+                        id="playerPriceButton">Calculate</button>
                 </div>
                 <div class="flex p-2">
                     <p class="w-64 text-white">Player Expense</p>
-                    <p class="text-white">$<span class="text-white">4000</span> </p>
+                    <p class="text-white">$<span class="text-white" id="totalPlayerPrice">4000</span> </p>
                 </div>
                 <div class="flex mb-2 p-2">
                     <h3 class="mr-4 text-white">Manager</h3>
-                    <input type="number" name="" id="" class="border ">
+                    <input type="number" name="" id="manager" class="border ">
                 </div>
                 <div class="flex p-2">
                     <h3 class="mr-9 text-white">Coach</h3>
-                    <input type="number" name="" id="" class="border">
+                    <input type="number" name="" id="coach" class="border">
                 </div>
                 <div class="flex justify-center">
-                    <button type="submit" class="text-white  bg-sky-600  w-64 h-8">Calculate Total</button>
+                    <button type="submit" class="text-white  bg-sky-600  w-64 h-8" id="finalCalculation">Calculate
+                        Total</button>
                 </div>
                 <div class="flex p-2">
                     <p class="w-72 text-white">TOTAL :</p>
-                    <p class="text-white">$<span class="text-white">4000</span> </p>
+                    <p class="text-white">$<span class="text-white" id="finalPrice">4000</span> </p>
                 </div>
             </div>
     </main>
