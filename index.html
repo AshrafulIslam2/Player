@@ -13,7 +13,9 @@
 <body>
     <header>
         <div class="flex bg-black ">
-            <div class=""><img src="image/ibrahim-removebg-preview.png" class="" alt=""></div>
+            <div class="sm:hidden md:block lg:block hidden"><img src="image/ibrahim-removebg-preview.png" class=""
+                    alt="">
+            </div>
             <div class="text-center flex flex-col items-center justify-center">
                 <h1 class=" text-amber-500 italic font-bold text-6xl">SELECT YOUR TOP PLAYER</h1>
                 <p class="text-white font-semibold my-8">World Cup is knocking on the door ,Before ball hit Qutar ground
@@ -21,18 +23,20 @@
                     best player on your
                     team .Your player play for your.You are the manager .So please select the palyer carefully.</p>
             </div>
-            <div class="">
+            <div class="sm:hidden md:block lg:block hidden">
                 <img src="image/ibrahim.png" class="ml-0" alt="">
             </div>
         </div>
     </header>
     <main class="flex bg-black">
-        <section class="grid grid-cols-3 content-center   gap-4 w-3/5 mx-auto" id="mainSection">
+        <section
+            class="grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1  grid-cols-1 content-center   gap-4 w-3/5 mx-auto mb-8"
+            id="mainSection">
 
         </section>
-        <section class="w-72  mx-auto ">
+        <section class=" w-48 md:w-72 lg:w-72 sm:w-72 mx-auto ">
             <div class="border rounded">
-                <table class="table-auto w-72 ">
+                <table class="table-auto w-48 md:w-72 lg:w-72 sm:w-72">
                     <thead>
                         <tr class="">
                             <th class="text-white">SL.</th>
@@ -50,7 +54,8 @@
                 </div>
                 <div class="flex p-2">
                     <h3 class="mr-1 text-white">Per player</h3>
-                    <input type="number" placeholder=" $ Enter Amount" name="" id="calcInput" class="border">
+                    <input type="number" placeholder=" $ Enter Amount" name="" id="calcInput"
+                        class="border w-24 md:w-72 lg:w-72 sm:w-72">
                 </div>
                 <div class="flex justify-center">
                     <button type="submit" class="text-white bg-sky-600 w-64 h-8"
@@ -62,11 +67,13 @@
                 </div>
                 <div class="flex mb-2 p-2">
                     <h3 class="mr-4 text-white">Manager</h3>
-                    <input type="number" placeholder=" $ Enter Amount" name="" id="manager" class="border ">
+                    <input type="number" placeholder=" $ Enter Amount" name="" id="manager"
+                        class="border w-24 md:w-72 lg:w-72 sm:w-72">
                 </div>
                 <div class="flex p-2">
                     <h3 class="mr-9 text-white">Coach</h3>
-                    <input type="number" placeholder=" $ Enter Amount" name="" id="coach" class="border">
+                    <input type="number" placeholder=" $ Enter Amount" name="" id="coach"
+                        class="border w-24 md:w-72 lg:w-72 sm:w-72">
                 </div>
                 <div class="flex justify-center">
                     <button type="submit" class="text-white  bg-sky-600  w-64 h-8" id="finalCalculation">Calculate
@@ -78,6 +85,9 @@
                 </div>
             </div>
     </main>
+    <footer class=" flex items-center justify-center bg-black h-28 border-t-2">
+        <h1 class=" text-center text-white">Copyright @ 2022 All Rights Reserve</h1>
+    </footer>
     <script src="common.js"></script>
     <script src="calculation2.js
     "></script>
