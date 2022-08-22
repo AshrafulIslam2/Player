@@ -87,7 +87,7 @@ function dynamicPlayer(player) {
     div.classList.add('border');
     div.classList.add('rounded');
     div.innerHTML = `
-            <div class="flex justify-center items-center ">
+            <div class="flex justify-center items-center mt-3">
                 <img src=${player.imgUrl} alt="" srcset="" class="image">
             </div>
             <div class="flex flex-col justify-ceneter items-center" id=playerSection>

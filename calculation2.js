@@ -33,20 +33,31 @@ document.getElementById('playerPriceButton').addEventListener('click', function 
      let calculationinputbox = document.getElementById('calcInput');
     let perPlayerPrice = calculationinputbox.value;
     let totalPlayer = serial;
-    let totalPrice = perPlayerPrice * totalPlayer;
-    let totalPlayerPrice = document.getElementById('totalPlayerPrice');
-    totalPlayerPrice.innerText = totalPrice;
+   
+    if (totalPlayer > 0) {
+        let totalPrice = perPlayerPrice * totalPlayer;
+        let totalPlayerPrice = document.getElementById('totalPlayerPrice');
+        totalPlayerPrice.innerText = totalPrice;
+    }
+    else {
+        alert("Please Select Player First");
+    }
 })
 document.getElementById('finalCalculation').addEventListener('click', function () {
     let managerPrice = document.getElementById('manager');
     let coachPrice = document.getElementById('coach');
     let totalPlayerPrice = document.getElementById('totalPlayerPrice');
     let final = document.getElementById('finalPrice');
-    let totaPlayerFinalPrice = parseInt(totalPlayerPrice.innerText);
+    if (managerPrice.value === '' || coachPrice.value === '') {
+        alert("please enter Number");
+    }
+    else {
+        let totaPlayerFinalPrice = parseInt(totalPlayerPrice.innerText);
     let managerTotalPrice = parseInt(managerPrice.value);
     let coachTotalPrice =parseInt( coachPrice.value);
-    let totalPrice = parseInt(managerTotalPrice + coachTotalPrice + totaPlayerFinalPrice);
-    console.log(totalPrice)
+    let totalPrice = managerTotalPrice + coachTotalPrice + totaPlayerFinalPrice;
     final.innerText = totalPrice;
+    }
+
 })
 
