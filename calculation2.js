@@ -35,10 +35,16 @@ document.getElementById('playerPriceButton').addEventListener('click', function 
     let perPlayerPrice = calculationinputbox.value;
     let totalPlayer = serial;
    
-    if (totalPlayer > 0) {
+    if (totalPlayer > 0 ) {
+        if (calculationinputbox.value != '') {
         let totalPrice = perPlayerPrice * totalPlayer;
         let totalPlayerPrice = document.getElementById('totalPlayerPrice');
         totalPlayerPrice.innerText = totalPrice;
+        }
+        else {
+            alert("Please Enter Player Price");
+        }
+        
     }
     else {
         alert("Please Select Player First");
