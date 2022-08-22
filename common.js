@@ -78,7 +78,7 @@ var ramos = {
 }
 
 
-
+//dynamic player card function
 function dynamicPlayer(player) {
     const main = document.getElementById('mainSection');
     let div = document.createElement('div');

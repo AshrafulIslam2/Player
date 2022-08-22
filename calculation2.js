@@ -1,3 +1,4 @@
+//select player function
 let serial = 0;
 function playerSelect(playerNameSelect) {
     let playerName = playerNameSelect.name;
@@ -28,6 +29,7 @@ function playerSelect(playerNameSelect) {
     }
     
 }
+// Total Player price  function
 document.getElementById('playerPriceButton').addEventListener('click', function () {
      let calculationinputbox = document.getElementById('calcInput');
     let perPlayerPrice = calculationinputbox.value;
@@ -42,6 +44,7 @@ document.getElementById('playerPriceButton').addEventListener('click', function 
         alert("Please Select Player First");
     }
 })
+// Total Budget function
 document.getElementById('finalCalculation').addEventListener('click', function () {
     let managerPrice = document.getElementById('manager');
     let coachPrice = document.getElementById('coach');
