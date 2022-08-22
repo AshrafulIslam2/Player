@@ -50,6 +50,9 @@ document.getElementById('finalCalculation').addEventListener('click', function (
     let coachPrice = document.getElementById('coach');
     let totalPlayerPrice = document.getElementById('totalPlayerPrice');
     let final = document.getElementById('finalPrice');
+    if (totalPlayerPrice.innerText == "00") {
+        alert('please select player first')
+    } else{
     if (managerPrice.value === '' || coachPrice.value === '') {
         alert("please enter Number");
     }
@@ -59,6 +62,7 @@ document.getElementById('finalCalculation').addEventListener('click', function (
     let coachTotalPrice =parseInt( coachPrice.value);
     let totalPrice = managerTotalPrice + coachTotalPrice + totaPlayerFinalPrice;
     final.innerText = totalPrice;
+        }
     }
 
 })
