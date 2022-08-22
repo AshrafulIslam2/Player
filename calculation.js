@@ -2,7 +2,8 @@ var messi = {
     name: "Leonal Massi",
     imgUrl:"image/messi.jpg",
     numberOfGoal: 124,
-    numberOfAssist:255,
+    numberOfAssist: 255,
+    
 }
 var rolandho = {
     name: "cristiano ronaldo",
@@ -70,17 +71,18 @@ var ramos = {
 function dynamicPlayer(player) {
     const main = document.getElementById('mainSection');
     let div = document.createElement('div');
+    const stringyfy =JSON.stringify(player);
     div.innerHTML = `
             <div class="flex justify-center items-center">
                 <img src=${player.imgUrl} alt="" srcset="" class="image">
             </div>
-            <div class="flex flex-col justify-ceneter items-center">
+            <div class="flex flex-col justify-ceneter items-center" id=playerSection>
                 <h1>${player.name}</h1>
                 <div class="flex justify-ceneter items-center">
                     <p class="mr-3">Goal:Goal:${player.numberOfGoal}</p>
                     <p>Assist:${player.numberOfAssist}</p>
                 </div>
-                <button type="submit" class= "text-white bg-sky-600 w-48 mt-4 h-8" id="player">Select</button>
+                <button type="submit" class= "text-white bg-sky-600 w-48 mt-4 h-8" id="Nameplayers" onclick = 'playerSelect(${stringyfy})'>Select</button>
             </div>
     
     `
@@ -88,7 +90,6 @@ function dynamicPlayer(player) {
                 
             
 }
-
 dynamicPlayer(messi);
 dynamicPlayer(rolandho);
 dynamicPlayer(coutinho);
