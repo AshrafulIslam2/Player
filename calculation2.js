@@ -11,10 +11,12 @@ function playerSelect(playerNameSelect) {
         serial = serial+1;
         td.innerText = serial;
         td.classList.add('text-center');
+        td.classList.add('text-white');
          Table.append(tr);
         tr.appendChild(td);
         td2.innerText = playerName;
         td2.classList.add('text-center');
+        td2.classList.add('text-white');
         tr.appendChild(td2);  
         var x = document.getElementById(playerNameSelect.id);
         console.log(x);

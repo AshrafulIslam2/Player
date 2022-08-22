@@ -82,18 +82,21 @@ var ramos = {
 function dynamicPlayer(player) {
     const main = document.getElementById('mainSection');
     let div = document.createElement('div');
-    const stringyfy =JSON.stringify(player);
+    const stringyfy = JSON.stringify(player);
+    div.classList.add('bg-stone-900');
+    div.classList.add('border');
+    div.classList.add('rounded');
     div.innerHTML = `
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center ">
                 <img src=${player.imgUrl} alt="" srcset="" class="image">
             </div>
             <div class="flex flex-col justify-ceneter items-center" id=playerSection>
-                <h1>${player.name}</h1>
+                <h1 class = "text-white text-xl mt-3">${player.name}</h1>
                 <div class="flex justify-ceneter items-center">
-                    <p class="mr-3">Goal:Goal:${player.numberOfGoal}</p>
-                    <p>Assist:${player.numberOfAssist}</p>
+                    <p class="mr-3 text-slate-400">Goal:Goal:${player.numberOfGoal}</p>
+                    <p class = "text-slate-400">Assist: ${player.numberOfAssist}</p>
                 </div>
-                <button type="submit" class= "text-white bg-sky-600 w-48 mt-4 h-8" id=${player.id} onclick = 'playerSelect(${stringyfy})'>Select</button>
+                <button type="submit" class= "text-white bg-sky-600 w-48 mt-4 h-8 mb-4" id=${player.id} onclick = 'playerSelect(${stringyfy})'>Select</button>
             </div>
     
     `
